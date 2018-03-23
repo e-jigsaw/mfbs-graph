@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "mfbs-graph",
+  "description": "Moneyforward bs visualizer",
+  "version": "0.0.1",
+  "author": "Takaya Kobayashi (https://kbys.tk/y)",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://moneyforward.com/bs/portfolio"
+      ],
+      "run_at": "document_end",
+      "js": [
+        "index.js"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    "embed.js"
+  ]
+}
