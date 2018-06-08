@@ -26,7 +26,7 @@ const data = Array.prototype.map.call(eqs, eq => {
   }
 })).map(({children, value}) => ({
   name: children[0].innerText,
-  y: parseInt(value.replace(',', '').replace('円', '')),
+  y: parseInt(value.replace(/,/g, '').replace(/円/g, '')),
   color: ''
 })).sort((a, b) => b.y - a.y).map((mf, i) => ({
   ...mf,
