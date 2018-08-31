@@ -43,6 +43,11 @@ new Highcharts.Chart({
   title: {
     text: ''
   },
+  tooltip: {
+    formatter: function () {
+      return `${this.point.name}/${addFigure(this.y)}円(${this.percentage.toFixed(2)}%)`
+    }
+  },
   series: [{
     type: 'pie',
     data
